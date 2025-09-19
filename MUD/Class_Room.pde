@@ -6,15 +6,23 @@ class Room {
   ArrayList<Enemy> enemies=new ArrayList<Enemy>();
 
   //konstrukter
-
-
+Room(String description){
+  
+this.description=description;
+}
 
 
   //metoder
   Room getExit(String direction) {
   }
+  void addExit(String direction,Room room){
+  exits.put(direction,room);
+  }
+  
   void addItem(Item item) {
+    items.add(item);
   }
   void addEnemy(Enemy enemy) {
+    enemies.add(enemy);
   }
 }

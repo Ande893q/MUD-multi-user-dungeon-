@@ -1,10 +1,12 @@
 class Enemy {
   String name="";
   int health;
-  int strenght;
+  int strength;
 
-  Enemy(String name) {
+  Enemy(String name,int health, int strength) {
     this.name=name;
+    this.health=health;
+    this.strength=strength;
   }
 
   void attack(Player player) {

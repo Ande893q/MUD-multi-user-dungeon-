@@ -32,7 +32,7 @@ class Game {
 
   void start() {
     println("Game started!");
-    println(player.location.description);
+    println(player.currentRoom.description);
   }
 
   void gameloop() {
