@@ -4,7 +4,7 @@ class Enemy {
   int strenght;
 
   Enemy(String name) {
-    this.name=name
+    this.name=name;
   }
 
   void attack(Player player) {
