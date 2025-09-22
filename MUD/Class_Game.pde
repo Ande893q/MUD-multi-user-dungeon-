@@ -18,7 +18,7 @@ class Game {
     // Tilføj items og enemies
     Item sword = new Item("Sword", "A sharp blade.", "Increase attack");
     Item hammer = new Item("hammer", "Realy heavy.", "Decrease attack");
-    Enemy goblin = new Enemy("Goblin", 30, 5);
+    Enemy goblin = new Enemy("Goblin", 30, 50000);
 
     r1.addItem(sword);
     r2.addItem(hammer);

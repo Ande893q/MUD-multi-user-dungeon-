@@ -43,11 +43,33 @@ class Command {
     } else if (input.contains("take") && game.player.currentRoom.items.size()>0) {
       game.player.take(game.player.currentRoom.items.get(0));
       println("You picked up a: " + game.player.getLastItem().name);
+    }else if (input.contains("stats")){
+    println(game.player.health+" HP");
+    println(game.player.strength+" ATK");
+    }  
+    
+    else if (input.contains("attack")) {
+      String[] split = input.split(" ");
+      String[] split2 = split[1].split("");
+      int index = Integer.valueOf(split2[0]);
+
+      // Credit til min goat, ChatGPT
+      if (index >= 0 && index < game.player.currentRoom.enemies.size()) {
+        Enemy enemy = game.player.currentRoom.enemies.get(index);
+        if (enemy != null) {
+          game.player.attack(enemy);
+          enemy.attack(game.player);
+          println("Enemy: " + enemy.name + " - " + enemy.health + " HP");
+          println("Player: " + game.player.name + " - " + game.player.health + " HP");
+        }
+      } else {
+        println("enemy doesn't exist");
+      }
     } else if (input.contains("use")) {
       String[] split = input.split(" ");
       String[] split2 = split[1].split("");
       int index = Integer.valueOf(split2[0]);
-      
+
       // Credit til min goat, ChatGPT
       if (index >= 0 && index < game.player.inventory.size()) {
         Item item = game.player.inventory.get(index);

@@ -1,22 +1,19 @@
+import processing.core.*; //<>// //<>//
 
-
-import processing.core.*;
-
-Game game; //<>//
-Input input = new Input(); //<>//
+Game game;
+Input input = new Input();
 
 
 void setup() {
   size(400, 400);
   game=new Game();
   game.start();
-      getInput().display();
+  getInput().display();
 }
 
 
 void draw() {
   game.gameloop();
-
 }
 
 Input getInput() {
@@ -24,8 +21,12 @@ Input getInput() {
 }
 
 void keyPressed() {
-    if(key == ENTER) {
-      getInput().inputText = true;
-      println(getInput().inputText);
-    }
+  if (key == ENTER) {
+    getInput().inputText = true;
   }
+}
+
+void commandBox(){
+rect(0,0,
+
+}
