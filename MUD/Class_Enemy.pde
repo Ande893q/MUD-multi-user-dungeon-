@@ -10,8 +10,10 @@ class Enemy {
   }
 
   void attack(Player player) {
+    player.health-=this.strength;
   }
 
   void takeDamage(int dmg) {
+    this.health-=dmg;
   }
 }

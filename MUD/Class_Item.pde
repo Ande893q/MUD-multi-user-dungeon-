@@ -10,5 +10,6 @@ class Item {
   }
 
   void use() {
+    println(use);
   }
 }

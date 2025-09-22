@@ -6,7 +6,7 @@ class Game {
 
   Game() {
     rooms = new ArrayList<Room>();
-    player = new Player("Hero", 100);
+    player = new Player("Hero", 100, 5);
     command = new Command();
 
     // Opret et eksempelrum
@@ -38,15 +38,10 @@ class Game {
   void gameloop() {
     // her kunne du opdatere input/output og game state
 
-    input.display(); // viser tekstbox på canvas
-
-
-
-
-    if (inputText) {
+    if (getInput().inputText) {
       handleInput(input.getText());
-      inputText=false;
-      input.reset();
+      getInput().inputText=false;
+      getInput().reset();
     }
   }
 

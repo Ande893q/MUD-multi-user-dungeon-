@@ -14,6 +14,7 @@ this.description=description;
 
   //metoder
   Room getExit(String direction) {
+    return exits.get(direction);
   }
   void addExit(String direction,Room room){
   exits.put(direction,room);
