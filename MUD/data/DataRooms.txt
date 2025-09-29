@@ -1,0 +1,6 @@
+r1,You are in a dark cave.
+r2,You are in a sunny meadow.
+r3,You are in a field of flowers.
+r4,You are in a ice cave.
+r5,You are in a small city.
+r6,You are in a in forest.

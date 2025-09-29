@@ -43,12 +43,10 @@ class Command {
     } else if (input.contains("take") && game.player.currentRoom.items.size()>0) {
       game.player.take(game.player.currentRoom.items.get(0));
       println("You picked up a: " + game.player.getLastItem().name);
-    }else if (input.contains("stats")){
-    println(game.player.health+" HP");
-    println(game.player.strength+" ATK");
-    }  
-    
-    else if (input.contains("attack")) {
+    } else if (input.contains("stats")) {
+      println(game.player.health+" HP");
+      println(game.player.strength+" ATK");
+    } else if (input.contains("attack")) {
       String[] split = input.split(" ");
       String[] split2 = split[1].split("");
       int index = Integer.valueOf(split2[0]);

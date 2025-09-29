@@ -27,6 +27,6 @@ void keyPressed() {
 }
 
 void commandBox(){
-rect(0,0,
+
 
 }

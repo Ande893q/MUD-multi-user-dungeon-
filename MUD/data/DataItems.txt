@@ -1,0 +1,22 @@
+"Sword", "A sharp blade.", "Increase attack"
+"Hammer", "Really heavy.", "Decrease attack"
+"Shield", "A study shield.", "Increase health"
+"Bow", "long range.", "Increase attack"
+"Staff", "good for walking.", "Increase health"
+"Boots", "protects the feet.", "Increase health"
+
+
+
+Item sword = new Item("Sword", "A sharp blade.", "Increase attack");
+    Item hammer = new Item("Hammer", "Realy heavy.", "Decrease attack");
+    Item shield = new Item("Shield", "A study shield.", "Increase health");
+    Item bow = new Item("Bow", "long range.", "Increase attack");
+    Item staff = new Item("Staff", "good for walking.", "Increase health");
+    Item boots = new Item("Boots", "protects the feet.", "Increase health");
+
+
+Enemy goblin = new Enemy("Goblin", 30, 5);
+    Enemy bat = new Enemy("Bat", 10, 7);
+    Enemy spider = new Enemy("Spider", 10, 10);
+    Enemy orc = new Enemy("Orc", 50, 5);
+    Enemy rabbit = new Enemy("Rabbit", 5, 1);
