@@ -1,0 +1,5 @@
+Goblin,30,5
+Bat,10,7
+Spider,10,10
+Orc,50,5
+Rabbit,5,1

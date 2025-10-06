@@ -9,6 +9,7 @@ void setup() {
   game=new Game();
   game.start();
   getInput().display();
+  
 }
 
 
