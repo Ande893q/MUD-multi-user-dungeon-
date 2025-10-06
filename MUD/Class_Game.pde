@@ -1,6 +1,8 @@
-class Game {
+class Game { //<>// //<>//
   Player player;
   Command command;
+  String[]dataFileItems=loadStrings("DataItems.txt");
+  String[][] splitDataFileItems = new String[dataFileItems.length][dataFileItems[0].length()-1];
 
 
   Game() {
@@ -24,27 +26,25 @@ class Game {
     }
 
 
-    String[]dataFileItems=loadStrings("DataItems.txt");
-    String[][] splitDataFileItems = new String[dataFileItems.length][dataFileItems[0].length()-1];
 
     for (int i = 0; i < 6; i++) {
       splitDataFileItems[i] = split(dataFileItems[i], ',');
     }
 
     for (int i=0; i<splitDataFileItems.length; i++) {
-      Item r= new Item(splitDataFileItems[i][0], splitDataFileItems[i][1], splitDataFileItems[i][2],Integer.valueOf(splitDataFileItems[i][3]),Integer.valueOf(splitDataFileItems[i][4]) );
+      Item r= new Item(splitDataFileItems[i][0], splitDataFileItems[i][1], splitDataFileItems[i][2], Integer.valueOf(splitDataFileItems[i][3]), Integer.valueOf(splitDataFileItems[i][4]) );
       items.add(r);
     }
 
 
-    String[]dataFileEnemies=loadStrings("DataEnemies.txt"); //<>//
+    String[]dataFileEnemies=loadStrings("DataEnemies.txt");
     String[][] splitDataFileEnemies = new String[dataFileEnemies.length][3];
 
     for (int i = 0; i < splitDataFileEnemies.length; i++) {
-      splitDataFileEnemies[i] = split(dataFileEnemies[i], ','); //<>//
+      splitDataFileEnemies[i] = split(dataFileEnemies[i], ',');
     }
-    
-      for (int i=0; i<splitDataFileEnemies.length; i++) {
+
+    for (int i=0; i<splitDataFileEnemies.length; i++) {
       Enemy r= new Enemy(splitDataFileEnemies[i][0], Integer.valueOf(splitDataFileEnemies[i][1]), Integer.valueOf(splitDataFileEnemies[i][2]));
       enemies.add(r);
     }
