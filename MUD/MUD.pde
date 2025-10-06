@@ -1,5 +1,5 @@
 import processing.core.*; //<>// //<>//
-
+boolean map=false;
 Game game;
 Input input = new Input();
 
@@ -9,14 +9,19 @@ void setup() {
   game=new Game();
   game.start();
   getInput().display();
-  commandBox();
- 
 }
 
 
 void draw() {
+  background(255);
   game.gameloop();
-   inventory();
+  if (map==false) {
+    inventory();
+    commandBox();
+  }
+  if(map==true){
+  map();
+  }
 }
 
 Input getInput() {
@@ -47,6 +52,7 @@ void commandBox() {
   text("\"south\"", textOffset, textSize*9);
   text("\"west\"", textOffset, textSize*10);
   text("\"items\"", textOffset, textSize*11);
+  fill(255);
 }
 
 void inventory() {
@@ -56,15 +62,17 @@ void inventory() {
   fill(255);
   rect(200, 0, 200, 160);
   fill(1);
-    textSize(textSize*1.5);
+  textSize(textSize*1.5);
   text("Inventory", 250, textSize*1.5);
   textSize(textSize);
-  
-    for (int i = 0; i < game.player.inventory.size(); i++) {
+
+  for (int i = 0; i < game.player.inventory.size(); i++) {
     Item item = game.player.inventory.get(i);
     text(i + ": " + item.name, 200 + textOffset, textSize * i + 50);
   }
+  fill(255);
 }
+
+void map() {
   
-  
- 
+}
