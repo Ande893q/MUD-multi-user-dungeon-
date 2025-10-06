@@ -1,6 +1,6 @@
-sword, A sharp blade., Increase attack
-hammer, Really heavy., Decrease attack
-shield, A study shield., Increase health
-bow, long range., Increase attack
-staff, good for walking., "Increase health
-boots, protects the feet., "Increase health
+sword, A sharp blade., Increase attack,+10,0
+hammer, Really heavy., Decrease attack,-5,+20
+shield, A study shield., Increase health,0,+50
+bow, long range., Increase attack,+10,0
+staff, good for walking., "Increase health,0,+25
+boots, protects the feet., "Increase health,0,+10

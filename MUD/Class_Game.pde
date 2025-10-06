@@ -32,7 +32,7 @@ class Game {
     }
 
     for (int i=0; i<splitDataFileItems.length; i++) {
-      Item r= new Item(splitDataFileItems[i][0], splitDataFileItems[i][1], splitDataFileItems[i][2]);
+      Item r= new Item(splitDataFileItems[i][0], splitDataFileItems[i][1], splitDataFileItems[i][2],Integer.valueOf(splitDataFileItems[i][3]),Integer.valueOf(splitDataFileItems[i][4]) );
       items.add(r);
     }
 

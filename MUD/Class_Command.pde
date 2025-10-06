@@ -67,6 +67,7 @@ class Command {
       String[] split = input.split(" ");
       String[] split2 = split[1].split("");
       int index = Integer.valueOf(split2[0]);
+      
 
       // Credit til min goat, ChatGPT
       if (index >= 0 && index < game.player.inventory.size()) {
