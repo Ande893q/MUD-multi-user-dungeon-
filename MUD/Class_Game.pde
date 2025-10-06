@@ -1,6 +1,5 @@
 class Game {
   Player player;
-
   Command command;
 
 
